@@ -28,8 +28,10 @@ function func_guardaLS(evento) {
   usuario = `usuario_${numeroUsrs + 1}`;
   // se almacena en localStorage el objeto con la info del personaje
   localStorage.setItem(usuario, JSON.stringify(info_usuario));
-  // carga pagina de inicio
-  window.location.href = "terminos.html";
+  // mensaje de agradecimiento
+  alert(`Gracias ${info_usuario.nombre} por registrarte.`);
+  // redireccion a pagina principal
+  window.location.href = "index.html";
 }
 
 function chkCondi() {
