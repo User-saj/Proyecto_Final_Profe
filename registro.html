@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro</title>
+    <!--  ---------------- enlace archivo css ------------------ -->
+    <link rel="stylesheet" href="login.css" />
+    <!--  ---------------- enlaces fonts externas ------------------ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Ecosistemas</h1>
+    <!-- --------------- Formulario de registro  --------------- -->
+    <form id="formRegistro" onsubmit="func_guardaLS(event)">
+      <div id="tit_reg">Registro de Usuario</div>
+      <!-- --------------- Usuario y contraseña  --------------- -->
+      <div class="container">
+        <label for="nUsuario"><b>Nombre de Usuario</b></label>
+        <input type="text" id="nUsuario" placeholder="Nombre de Usuario Nuevo" required />
+        <label for="mailUsuario"><b>Correo electrónico</b></label>
+        <input type="text" id="mailUsuario" placeholder="Escribe tu email" required />
+        <label for="nPass"><b>Contraseña</b></label>
+        <input type="password" id="nPass" placeholder="Escibe Contraseña" required />
+        <!--  -------------- terminos --------------- -->
+        <input type="checkbox" onchange="chkCondi()" id="term_cond" />
+        Estoy de acuerdo con los
+        <a href="terminos.html" target="_blank">términos y condiciones</a>
+        <br />
+        <!-- --------------- Boton login --------------- -->
+        <button type="submit" id="guardar">Crear Cuenta</button>
+      </div>
+      <!-- --------------- Boton cancelar --------------- -->
+      <div class="container" style="background-color: #f1f1f1">
+        <a class="cancelbtn" href="index.html">Cancelar</a>
+      </div>
+    </form>
+
+    <!-- liga al archivo JS -->
+    <script src="registro.js"></script>
+  </body>
+</html>

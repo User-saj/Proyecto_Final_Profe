@@ -1,0 +1,119 @@
+/* EStilos para login.html */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4vw;
+  background-color: black;
+}
+body h1 {
+  text-align: center;
+  padding: 2.5vw;
+  color: rgb(204, 255, 1);
+  font-family: "Bruno Ace SC", cursive;
+}
+form {
+  width: 30%;
+  margin: auto;
+  background-color: rgba(204, 255, 1, 0.7);
+  border: 3px solid rgb(204, 255, 1);
+  border-radius: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 1vw 1.5vw;
+  margin: 1vw 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 1.4vw;
+}
+
+input[type="checkbox"] {
+  width: 1.5vw;
+  height: 1.5vw;
+}
+
+#entrar,
+#guardar {
+  background-color: dodgerblue;
+  color: white;
+  padding: 1.2vw 1.5vw;
+  margin: 1.5vw 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.4vw;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+.cancelbtn {
+  width: 35%;
+  padding: 1vw 1.4vw;
+  background-color: #f44336;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+}
+
+.psw a {
+  font-size: 1.4vw;
+  text-decoration: none;
+  color: blue;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 3vw 0 1.5vw 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 2vw;
+  font-size: 1.4vw;
+}
+
+span.psw {
+  float: right;
+}
+
+#registro {
+  width: 100%;
+  display: inline-block;
+  text-align: right;
+  font-size: 1.2vw;
+}
+
+#reg {
+  background-color: rgb(245, 179, 12);
+  color: rgb(69, 69, 69);
+  padding: 0.3vw 0.25vw;
+  margin: 0.25vw 0;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 24%;
+  font-size: 1-2vw;
+}
+
+#tit_reg {
+  padding-top: 1vw;
+  text-align: center;
+  font-size: 2vw;
+  font-weight: bold;
+}
