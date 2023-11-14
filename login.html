@@ -18,7 +18,7 @@
   <body>
     <h1>Ecosistemas</h1>
     <!-- --------------- Formulario --------------- -->
-    <form action="/action_page.php" method="post">
+    <form id="formLogin" onsubmit="func_leeLS(event)">
       <div class="imgcontainer">
         <img src="avatar_female.png" alt="Avatar" class="avatar" />
         <img src="avatar_male.png" alt="Avatar" class="avatar" />
@@ -26,9 +26,9 @@
       <!-- --------------- Usuario y contraseña  --------------- -->
       <div class="container">
         <label for="uname"><b>Nombre de Usuario</b></label>
-        <input type="text" placeholder="Escribe tu Nombre de Usuario" name="uname" required />
+        <input type="text" placeholder="Escribe tu Nombre de Usuario" id="uname" required />
         <label for="psw"><b>Contraseña</b></label>
-        <input type="password" placeholder="Escibe tu Contraseña" name="psw" required />
+        <input type="password" placeholder="Escibe tu Contraseña" id="psw" required />
         <!-- --------------- Boton login --------------- -->
         <button type="submit" id="entrar">Login</button>
         <!-- --------------- Boton registro --------------- -->
@@ -43,5 +43,8 @@
         <span class="psw">Olvidaste tu <a href="olvido.html">contraseña?</a></span>
       </div>
     </form>
+
+    <!-- liga al archivo JS -->
+    <script src="login.js" defer></script>
   </body>
 </html>
