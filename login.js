@@ -24,6 +24,7 @@ function func_leeLS(evento) {
   if (localStorage.length == 0) {
     alert("No hay Usuarios Registrados");
     window.location.href = "registro.html";
+    return;
   }
   // nombre y pass introducido por el usuario
   const logNombre = document.getElementById("uname").value;
