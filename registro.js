@@ -20,10 +20,19 @@ function func_guardaLS(evento) {
   let nCompl = document.getElementById("nUsuario").value;
   let nEmail = document.getElementById("mailUsuario").value;
   let nContr = document.getElementById("nPass").value;
+  //  revisa que avatar se selecciono
+  let varAvatar = document.querySelector('input[name="avatar"]:checked');
+  if (varAvatar != null) {
+    nAvatar = varAvatar.value;
+  } else {
+    nAvatar = "#";
+  }
+
   // se llena una variable objeto con los valores obtenidos del formulario
   info_usuario = {
     nombre: nCompl,
     correo: nEmail,
+    avatar: nAvatar,
     contrasena: nContr,
   };
   // se genera una key consecutiva cada vez que se presiona el boton submit

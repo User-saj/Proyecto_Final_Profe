@@ -31,23 +31,9 @@ form {
   font-weight: bold;
 }
 
-.container {
-  padding: 0vw 2vw 2vw;
-  font-size: 1.4vw;
-}
-
-.imgcontainer {
-  text-align: center;
-  margin: 1vw 0 1.5vw 0;
-}
-
-.avatar {
-  width: 30%;
-  border-radius: 50%;
-}
-
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="email"] {
   width: 100%;
   padding: 1vw 1.5vw;
   margin: 1vw 0;
@@ -63,7 +49,7 @@ input[type="checkbox"] {
   height: 1.5vw;
 }
 
-#entrar {
+#guardar {
   background-color: dodgerblue;
   color: white;
   padding: 1.2vw 1.5vw;
@@ -79,15 +65,6 @@ button:hover {
   opacity: 0.7;
 }
 
-.form_cancelar {
-  height: 5vw;
-  background-color: #f1f1f1;
-}
-
-#cancelar {
-  padding: 2vw;
-}
-
 .cancelbtn {
   width: 35%;
   padding: 1vw 1.4vw;
@@ -97,14 +74,9 @@ button:hover {
   color: white;
 }
 
-.fgt_psw a {
+.container {
+  padding: 1vw 2vw;
   font-size: 1.4vw;
-  text-decoration: none;
-  color: blue;
-}
-
-.fgt_psw {
-  float: right;
 }
 
 #registro {
@@ -117,12 +89,52 @@ button:hover {
 #reg {
   background-color: rgb(245, 179, 12);
   color: rgb(69, 69, 69);
-  padding: 0.4vw 0.25vw;
+  padding: 0.3vw 0.25vw;
   margin: 0.25vw 0;
   border: none;
-  border-radius: 0.6vw;
+  border-radius: 3px;
   cursor: pointer;
   width: 24%;
-  font-size: 1.4vw;
-  font-weight: bold;
+  font-size: 1-2vw;
+}
+
+#avatars {
+  width: 100%;
+
+  overflow-y: auto;
+}
+.avatars > input {
+  display: none;
+}
+
+#avatars div {
+  text-align: center;
+}
+
+.avatars > input + img {
+  width: 14%;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+
+.avatars > input:checked + img {
+  border: 2px solid red;
+}
+
+#contReg {
+  box-sizing: border-box;
+  padding: 1.2vw;
+  border: 0.25vw solid black;
+  border-radius: 0.75vw;
+}
+
+.form_cancelar {
+  height: 5vw;
+  background-color: #f1f1f1;
+}
+
+#cancelar {
+  text-align: center;
+  padding: 2vw;
 }
