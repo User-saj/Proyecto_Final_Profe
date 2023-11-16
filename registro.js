@@ -1,12 +1,26 @@
 /* JavaScript para registro.html */
 
-/* ------------------------ acciones iniciales --------------------------- */
+/* --------------------- acciones iniciales ----------------------- */
 // bloquea el boton de guardar
 var btnGrdr = document.getElementById("guardar");
 btnGrdr.disabled = true;
 btnGrdr.style.cursor = "not-allowed";
 
-/* --------------------   funciones -------------------- */
+/* --------------- funcion para cargar datos del LS --------------- */
+// ***** funcion: extrae todos los usuarios de Local Sorage en un arreglo
+function todoStorage() {
+  let arreglo = [], // arreglo vacio
+    keys = Object.keys(localStorage), // var con todos los key de localStorage
+    i = keys.length; // numero de keys en localStorage
+  // i-- resta 1 a i en cada iteracion, se detiene cuando i=0
+  while (i--) {
+    // almacena en el arreglo un objeto(con todos los datos) por cada usuario
+    arreglo.push(JSON.parse(localStorage.getItem(keys[i]))); // push añade elemento al final
+  }
+  return arreglo;
+}
+const usrsArreglo = todoStorage();
+
 // ***** funcion: guarda info del formulario al presionar el boton "guardar"(submit)
 function func_guardaLS(evento) {
   // previene la accion original del boton submit
@@ -17,7 +31,7 @@ function func_guardaLS(evento) {
   // numero inicial de usuarios en Local Storage
   let numeroUsrs = localStorage.length;
   // carga la informacion del formulario en variables locales
-  let nCompl = document.getElementById("nUsuario").value;
+  let nNombre = document.getElementById("nUsuario").value;
   let nEmail = document.getElementById("mailUsuario").value;
   let nContr = document.getElementById("nPass").value;
   //  revisa que avatar se selecciono
@@ -28,9 +42,23 @@ function func_guardaLS(evento) {
     nAvatar = "#";
   }
 
+  /* busca en el local storage si ya existe el nombre o el email */
+  // indice del arreglo que coincida con el nombre ( si no existe es -1)
+  const idxNombre = usrsArreglo.findIndex((elemento) => elemento.nombre == nNombre);
+  if (idxNombre > -1) {
+    alert(`EL nombre ${nNombre} ya está registrado.`);
+    return;
+  }
+  // indice del arreglo que coincida con el email ( si no existe es -1)
+  const idxEmail = usrsArreglo.findIndex((elemento) => elemento.correo == nEmail);
+  if (idxEmail > -1) {
+    alert(`EL correo ${nEmail} ya está registrado.`);
+    return;
+  }
+
   // se llena una variable objeto con los valores obtenidos del formulario
   info_usuario = {
-    nombre: nCompl,
+    nombre: nNombre,
     correo: nEmail,
     avatar: nAvatar,
     contrasena: nContr,

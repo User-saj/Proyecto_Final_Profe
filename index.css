@@ -6,7 +6,7 @@
   padding: 0%;
 }
 
-/* --------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------- */
 /* ------------- Cabecera ------------ */
 header {
   margin: 0.8% 1% 0.5% 1%;
@@ -54,6 +54,33 @@ header > a {
   text-decoration: none;
 }
 
+/* texto flotante del nombre de suario */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.tooltip #tooltiptext {
+  visibility: hidden;
+  width: 11vw;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5vw;
+  color: magenta;
+  background-color: black;
+  text-align: center;
+  border-radius: 0.5vw;
+  padding: 0.4vw 0;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 95%;
+  left: 50%;
+  margin-left: -5vw;
+}
+.tooltip:hover #tooltiptext {
+  visibility: visible;
+}
+
 /* ------------ Ubicacion celdas Grid cabecera ------------- */
 header img {
   grid-column: 1;
@@ -90,7 +117,7 @@ header img {
   border-radius: 50%;
 }
 
-/* --------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
 /* --------------- Main --------------- */
 main {
   margin: 0 1% 0 1%;
@@ -204,7 +231,7 @@ main {
   grid-row: 3;
 }
 
-/* --------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------- */
 /* ----------- Footer -------------- */
 footer {
   margin: 0.4% 1% 0.5% 1%;
@@ -223,32 +250,4 @@ footer {
   font-size: 1.5vw;
   color: rgb(204, 255, 1);
   text-decoration: none;
-}
-
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
-
-.tooltip #tooltiptext {
-  visibility: hidden;
-  width: 10vw;
-  background-color: rgb(47, 46, 46);
-  font-size: 1.5vw;
-  color: #fff;
-  text-align: center;
-  border-radius: 0.6vw;
-  padding: 1vw 0;
-
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-  top: 100%;
-  left: 50%;
-  margin-left: -60px;
-}
-
-.tooltip:hover #tooltiptext {
-  visibility: visible;
 }
