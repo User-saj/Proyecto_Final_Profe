@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <!--  ---------------- enlace archivo css ------------------ -->
+    <link rel="stylesheet" href="login.css" />
+    <!--  ---------------- enlaces fonts externas ------------------ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Ecosistemas</h1>
+    <!-- --------------- Formulario --------------- -->
+    <form id="formLogin" onsubmit="func_leeLS(event)">
+      <div id="tit_form">Inicio de Sesión</div>
+      <div class="imgcontainer">
+        <img src="images/avatars/avatar_female.png" alt="Avatar" class="avatar" />
+        <img src="images/avatars/avatar_male.png" alt="Avatar" class="avatar" />
+      </div>
+      <!-- --------------- Usuario y contraseña  --------------- -->
+      <div class="container">
+        <label for="uname"><b>Nombre de Usuario</b></label>
+        <input type="text" placeholder="Escribe tu Nombre de Usuario" id="uname" required />
+        <label for="psw"><b>Contraseña</b></label>
+        <input type="password" placeholder="Escibe tu Contraseña" id="psw" required />
+        <!-- --------------- Boton login --------------- -->
+        <button type="submit" id="entrar">Login</button>
+        <!-- --------------- Boton registro --------------- -->
+        <div id="registro">
+          <span>No estás registrado?</span>
+          <button onclick="window.location.href='registro.html';" id="reg">Registro</button>
+        </div>
+      </div>
+      <!-- --------------- Boton cancelar --------------- -->
+      <div class="form_cancelar">
+        <div id="cancelar">
+          <a class="cancelbtn" href="index.html">Cancelar</a>
+          <span class="fgt_psw">Olvidaste tu <a href="olvido.html">contraseña?</a></span>
+        </div>
+      </div>
+    </form>
+
+    <!-- liga al archivo JS -->
+    <script src="login.js" defer></script>
+  </body>
+</html>
