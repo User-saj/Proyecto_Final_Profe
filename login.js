@@ -31,12 +31,13 @@ function func_leeLS(evento) {
   const logPass = document.getElementById("psw").value;
   // busca el indice del arreglo que coincida con el nombre para login ( si no existe es -1)
   const idxBuscado = usrsArreglo.findIndex((elemento) => elemento.nombre == logNombre);
-  const lnkAvatar = usrsArreglo[idxBuscado].avatar;
   // opciones posibles en login
   if (idxBuscado == -1) {
     alert(`El usuario ${logNombre} no está registrado`);
   } else {
     if (usrsArreglo[idxBuscado].contrasena == logPass) {
+      // avatar del usuario
+      const lnkAvatar = usrsArreglo[idxBuscado].avatar;
       // guarda nombre de usuario y direccion del avatar en sessionStorage
       sessionStorage.setItem("nombUsr", logNombre);
       sessionStorage.setItem("avatarUsr", lnkAvatar);
